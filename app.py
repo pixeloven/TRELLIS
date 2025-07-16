@@ -402,6 +402,7 @@ if __name__ == "__main__":
     pipeline.cuda()
     demo.launch(
         server_name=os.environ.get('GRADIO_SERVER_NAME', '0.0.0.0'),
-        server_port=int(os.environ.get('GRADIO_SERVER_PORT', '7860')),
-        share=os.environ.get('GRADIO_SHARE', 'false').lower() == 'true'
+        server_port=int(os.environ.get('GRADIO_SERVER_PORT', 7860)),
+        share=False,
+        quiet=True,
     )
